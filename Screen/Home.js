@@ -5,7 +5,7 @@ import ImageSlider from 'react-native-image-slider'
 
 import FoodItems from "../Components/FoodItems"
 
-export default function App() {
+export default function Home() {
     let images = [
         require("../assets/bg.jpg"),
         require("../assets/rice.jpg"),
@@ -13,9 +13,7 @@ export default function App() {
     ]
     const foods = [
         {id: "1", image: require('../assets/steak.jpg'), name: "Steak", price: "20$", detail:  "A steak is a meat generally sliced across the muscle fibers, potentially including a bone. It is normally grilled, though can also be pan-fried. It is often grilled in an attempt to replicate the flavor of steak cooked over the glowing coals of an open fire." },
-    
         {id: "2", image: require('../assets/rice.jpg'), name: "Rice", price: "30$", detail:  "Rice is the seed of the grass species Oryza sativa or less commonly Oryza glaberrima. As a cereal grain, it is the most widely consumed staple food for a large part of the world's human population, especially in Asia and Africa." },
-    
         {id: "3", image: require('../assets/pizza.jpg'), name: "Pizza", price: "20$", detail:  "Pizza is a savory dish of Italian origin consisting of a usually round, flattened base of leavened wheat-based dough topped with tomatoes, cheese, and often various other ingredients, which is then baked at a high temperature, traditionally in a wood-fired oven. A small pizza is sometimes called a pizzetta." },
     
         {id: "4", image: require('../assets/eggs.jpg'), name: "Omlette", price: "20$", detail: "In cuisine, an omelette or omelet is a dish made from beaten eggs, fried with butter or oil in a frying pan (without stirring as in scrambled egg). It is quite common for the omelette to be folded around fillings such as cheese, chives, vegetables, mushrooms, meat (often ham or bacon), or some combination of the above." },
