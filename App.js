@@ -4,10 +4,11 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator} from '@react-navigation/stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
-import Home from './Screen/Home';
 const Stack = createStackNavigator()
 const Tab = createBottomTabNavigator()
 
+import Home from './Screen/Home';
+import Details from './Screen/Details'
 export default function App() {
   return (
     <NavigationContainer>
@@ -50,6 +51,10 @@ function HomeStack (){
           component={Home}
           options={{title: "Home Page"}}
     /> 
+    <Stack.Screen 
+          name="Details"
+          component={Details}
+        /> 
   </Stack.Navigator>
   )
 }
