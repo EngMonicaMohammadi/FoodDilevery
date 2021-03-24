@@ -1,12 +1,14 @@
 import React from 'react';
-import { StyleSheet, Text, View , Image} from 'react-native';
+import { StyleSheet, Text, View , Image,TouchableOpacity} from 'react-native';
 
+import {useNavigation  } from "@react-navigation/native";
 
-
-export default function FoodItems({image, name, price}) {
-
+export default function FoodItems({image, name, price, details}) {
+const navigation = useNavigation()
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container}
+    onPress={() => navigation.navigate("Details", {image, name, price, details})}
+    >
         <Image 
             style={styles.image}
             source={{uri: image}}
@@ -15,7 +17,7 @@ export default function FoodItems({image, name, price}) {
             <Text style={{fontWeight: "bold"}}>{name}</Text>
             <Text>{price}</Text>
         </View>
-    </View>
+    </TouchableOpacity>
   );
 }
 
